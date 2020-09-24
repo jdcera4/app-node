@@ -1,0 +1,183 @@
+<%- include ('./layouts/main.ejs') %>
+<body >
+  <div class="container" >
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+      }); 
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <nav >
+      
+      <div class="nav-wrapper" id="caja">
+      <img src="./images/cubo blanco.png" class="imagen" alt="">
+        <a href="#!" class="brand-logo" id="text"  >Encuesta de salud </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="./Oximetria.html">oximetria</a></li>
+          <li><a href="./login.html">Login</a></li>  
+          
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="./Oximetria.html">oximetria</a></li>
+      <li><a href="./login.html">Login</a></li>
+      
+    </ul>
+    <br>
+
+    <form id='Form' action='/routes/captura-route' method="POST" >
+      <div class="row">
+        <div class="col s12 ">
+          <div class="card-panel">
+            <div class="row">
+              <div class="input-field col s12">
+                <input  pattern=".{3,}"  title="minimo 3 caracteres" id="documento" type="number" class="validate" name="documento" maxlength="15" required >
+                <label for="documento" style="color: grey;">Documento*</label>
+              </div>
+            </div> 
+          </div>
+          <div class="card-panel">
+            <div class="row">
+              <div class="input-field col s12">
+              <input  type="text"  name="nombre"   >
+                <label for="documento" style="color: grey;" >Nombre*</label>
+              </div>
+            </div> 
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma1" id="sintoma1" />
+                  <span style="color: grey;">¿Tiene sensación de malestar general?</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma2"  />
+                  <span style="color: grey;">¿Tiene sensación de fatiga o cansancio muscular?</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma3" />
+                  <span style="color: grey;">¿Tienes tos seca y persistente?</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma4" />
+                  <span style="color: grey;">¿Tienes fiebre? (+ 38º C)</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma5" />
+                  <span style="color: grey;">¿Tienes pérdida del olfato y/o el gusto?</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma6" />
+                  <span style="color: grey;">¿Tienes sensación de falta de aire de inicio brusco? Dificultad para respirar</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma7" />
+                  <span style="color: grey;">¿Tienes secreciones nasales o congestión nasal?</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              <p>
+                <label>
+                  <input type="checkbox"  name="sintoma8" />
+                  <span style="color: grey;">¿Has Tenido contacto en los últimos 14 días o vives con alguien sospecho o confirmado de tener
+                    COVID-19?</span>
+                </label>
+              </p>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="row">
+              
+              <p>
+                
+                <label>
+                  
+                  <input type="checkbox"  name="confirmacion" id="confirm" required/>
+                  <span style="color: grey; text-align: center;">Confirmo que la informacion aqui registrada es correcta*</span>
+               
+                </label>
+                 
+              </p>
+              
+            </div>
+          </div>
+
+          <center>
+            <input class="waves-effect waves-light btn-large" type='submit' style="background-color: 	#c40c0c" onclick="return button()" value="Enviar"  data-target="#myModal" data-id="#" data-toggle="modal" href="#" >
+            <p class="warnings" id="warnings"></p>                                        
+          </center>
+          
+        </div>
+      </div>
+  </div>
+<br> 
+  </div>
+  </form>
+  </div>
+
+
+
+  
+
+ 
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="./js/main.js"></script>  
+</body>
+
+</html>

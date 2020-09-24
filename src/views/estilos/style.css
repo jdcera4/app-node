@@ -1,0 +1,21 @@
+#caja{
+    background-color: #c40c0c;
+}
+body{
+    background-color: #eee;
+}
+.imagen{
+    height: 3rem; 
+    margin-top: 2%;
+    margin-right: 20%;
+    display: inline-block;
+    }
+
+#text{
+    font-size: 4vw;
+    display: inline-block;
+    
+}
+p{
+    color: black;
+}

@@ -1,0 +1,39 @@
+<%- include ('./layouts/main.ejs') -%>
+
+    <div class="container">
+    
+        <nav>
+          <div class="nav-wrapper" id="caja">
+            <img src="../images/cubo blanco.png" class="imagen" alt="">
+            <a href="#!" class="brand-logo">Encuesta de Salud</a>
+            <a href="#"  class="sidenav-trigger">
+            <ul class="right hide-on-med-and-down">
+              
+              
+            </ul>
+          </div>
+        </nav> 
+
+        <div class="row">
+        <div class="col s12 ">
+          <div class="card-panel">
+            <div class="row">
+              <div class="input-field col s12">
+              <p class="flow-text" style="color: black">
+                 <% if (documento) { %>
+                  <p>El documento <%-documento%> no existe o está mal digitado, por favor verifique o comuniquese al area de sistemas por la linea de soporte para revisar tu caso</p>
+                <% } else { %>
+                  <h1>Boohiss no myVar!</h1>
+                <% } %>
+              </p>
+                <center>
+               <a href="http://localhost:8080/" class="waves-effect waves-light btn-large" style="background-color: #c40c0c">Inicio</a>
+               </center>
+              </div>
+            </div> 
+          </div>
+          </div>
+          </div>
+    </div>
+   
+

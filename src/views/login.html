@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/cubo rojo.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container" >
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <nav>
+      <div class="nav-wrapper"
+      style="background-color: 	#c40c0c">
+        <a href="#!" class="brand-logo"><i class="large
+                          material-icons" ><img src="./images/cubo blanco.png" style="height: 70%; ; margin-top: 20%;" alt=""></i>Encuesta de Salud</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="http://localhost:8080/">Inicio</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="http://localhost:8080/">Inicio</a></li>
+     
+    </ul>
+    <br>
+    <form action="/controllers/authenticate-controller" method="POST">
+    <div class="row">
+      <div class="col s12 ">
+        <div class="card-panel">
+    <div class="row">
+        <div class="input-field col s12">
+          <input id="documento" type="number" class="validate" name="documento" required>
+          <label for="Email">documento</label>
+        </div>
+      </div>
+    </div> 
+   </div>
+  </div>
+  <div class="row">
+    <div class="col s12 ">
+    <div class="card-panel">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="password" required>
+          <label for="password">Password</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<center>
+  <input class="waves-effect waves-light btn-large" type='submit' style="background-color: 	#c40c0c"  value="Enviar"  data-target="#myModal"  href="#" >
+                                         
+</center>
+</form>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+</html>
